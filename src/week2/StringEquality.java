@@ -9,5 +9,6 @@ public class StringEquality {
         System.out.println(firstString.equals(secondString));
         // This is wrong
         System.out.println(firstString == secondString);
+        System.out.printf("%6s", "world");
     }
 }
