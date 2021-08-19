@@ -13,6 +13,7 @@ public class Scorer {
         } else if (score >= 60 && score <=69){
             System.out.println("PA");
         }
+        int totStdsInTut = 1;
     }
 }
 

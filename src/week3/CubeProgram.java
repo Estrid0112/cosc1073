@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class CubeProgram {
     public static int cube(int i) {
-        int j = i * i * i;
-        return j;
+        i = i * i * i;
+        return i;
     }
     public static void main(String[] args){
         Scanner scnr = new Scanner(System.in);
