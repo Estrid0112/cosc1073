@@ -1,15 +1,19 @@
 package week7;
 
-public class Account{
+public class Account {
     //Attributes; Instance variables; Member fields
     private String id;
     private String name;
     private int balance;
+    private int[] records;
 
     //Constructors
     public Account(String id, String name, int balance){
         this(id, name);
-        this.balance = balance;
+        if (balance >= 0) {
+            this.balance = balance;
+        }
+
     }
 
     public Account(String id, String name){
@@ -51,6 +55,10 @@ public class Account{
 
     public int getBalance(){return balance; }
 
+    public void setBalance(int balance){
+        this.balance = balance;
+    }
+
     public void deposit(int amount) {
         this.balance = this.balance + amount;
     }
@@ -86,10 +94,18 @@ public class Account{
         System.out.println("Account balance: " + this.balance);
     }
 
-    public static void main(String[] args) {
-        Account account = new Account();
-        System.out.println(account.id);
+    public String toString(){
+        String myString = "";
+        myString += "Account ID: " + this.id + "\n";
+        myString += "Account name: " + this.name + "\n";
+        myString += "Account balance: " + this.balance;
+        return myString;
     }
+
+//    public static void main(String[] args) {
+//        Account account = new Account();
+//        System.out.println(account.id);
+//    }
 
 }
 
