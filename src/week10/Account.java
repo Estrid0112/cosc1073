@@ -1,4 +1,4 @@
-package week7;
+package week10;
 
 public class Account {
     //Attributes; Instance variables; Member fields
@@ -8,27 +8,9 @@ public class Account {
 
     //Constructors
     public Account(String id, String name, int balance){
-        this(id, name);
-        if (balance >= 0) {
-            this.balance = balance;
-        }
-
-    }
-
-    public Account(String id, String name){
         this.id = id;
         this.name = name;
-    }
-
-    public Account(String accountID, int balance){
-        id = accountID;
         this.balance = balance;
-    }
-
-    public Account(){
-        this.id = null;
-        this.name = null;
-        this.balance = 0;
     }
 
     //Methods
@@ -87,12 +69,6 @@ public class Account {
         }
     }
 
-    public void print(){
-        System.out.println("Account ID: " + this.id);
-        System.out.println("Account name: " + this.name);
-        System.out.println("Account balance: " + this.balance);
-    }
-
     public String toString(){
         String myString = "";
         myString += "Account ID: " + this.id + "\n";
@@ -100,11 +76,5 @@ public class Account {
         myString += "Account balance: " + this.balance;
         return myString;
     }
-
-    public static void main(String[] args) {
-        Account account = new Account();
-        System.out.println(account.id);
-    }
-
 }
 
